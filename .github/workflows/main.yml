@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-node@v2
       - run: npm install
       - run: npm run build
-      - run: npx gh-pages -d public -b master -u "GitHub Actions <bots@github.com>" -t -f
+      - run: npx gh-pages -d dist -b master -u "GitHub Actions <bots@github.com>" -t -f
           -r https://${{ secrets.CODING_TOKEN }}@e.coding.net/zce/playground/m2i.git
