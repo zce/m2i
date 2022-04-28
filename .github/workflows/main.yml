@@ -6,9 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - run: npm install
       - run: npm run build
-      - run: npx gh-pages -d dist -b master -u "GitHub Actions <bots@github.com>" -t -f
-          -r https://${{ secrets.CODING_TOKEN }}@e.coding.net/zce/playground/m2i.git
+      - run: npx gh-pages -d dist -u "GitHub Actions <bots@github.com>" -t -f

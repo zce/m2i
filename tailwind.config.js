@@ -1,13 +1,11 @@
+// See https://tailwindcss.com/docs/configuration
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js}'],
   darkMode: 'media', // or 'media' or 'class'
+  content: ['./index.html', './src/**/*.{vue,js}'],
   theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [
     require('@tailwindcss/forms')
-  ],
+  ]
 }
