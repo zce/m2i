@@ -6,8 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
       - run: npm install
       - run: npm run build
       - run: npx gh-pages -d dist -u "GitHub Actions <bots@github.com>" -t -f
+          -r https://${{ secrets.GITHUB_TOKEN }}@github.com/zce/m2i.git
